@@ -39,3 +39,38 @@ Made with ❤️ by illlights.
 
 
 
+## successiveDifferences.py
+
+简介：逐差法
+
+使用方法：
+
+1. 在同一目录下建立一个input.txt，把实验数据全部放输进去，一个数据一个空格。
+
+2. 运行successiveDifferences.py
+
+   （如果在文件在C盘需要以管理员身份运行）
+
+3. 结果会输出在result.txt
+
+
+
+## leastSquaresFitting.py（尚未检验正确性）
+
+简介：最小二乘法拟合
+
+使用方法：
+
+1. 输入从input.txt中获取
+
+   格式： 第一行写x坐标，第二行写y坐标，一一对应 
+
+2. 运行leastSquaresFitting.py
+
+3. 输出到result.txt: 
+
+   第一行：回归直线方程 
+
+   第二、三、四行：y、a、b的标准差 
+
+   第五行：相关系数
