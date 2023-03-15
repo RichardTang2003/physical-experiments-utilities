@@ -1,9 +1,9 @@
-# physical-experiments-utility
-Python based tools for physical experiments.
+# 物理实验计算工具
+基于Python的物理实验计算工具。适用于大量数据的处理。
 
-Made with ❤️ by illlights.
+Made with ❤️ by illlights && ChatGPT4.
 
-[illlights.com](https://www.illlights.com)
+Website: [illlights.com](https://www.illlights.com)
 
 
 
