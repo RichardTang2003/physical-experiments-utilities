@@ -74,3 +74,15 @@ Website: [illlights.com](https://www.illlights.com)
    第二、三、四行：y、a、b的标准差 
 
    第五行：相关系数
+
+
+
+## lagrange_multiplier_optimization.py
+
+简介：二元拉格朗日乘子法解决条件约束问题
+
+使用方法：
+
+1. 打开lagrange_multiplier_optimization.py源文件
+2. 修改定义目标函数的函数内容
+3. 用python运行，结果会显示在程序输出
