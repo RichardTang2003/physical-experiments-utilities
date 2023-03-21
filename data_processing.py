@@ -1,16 +1,17 @@
 import numpy as np
 
 def t683(data):
+    t = 0
     len = np.size(data)
-    if(len == 2):
+    if len == 2:
       t = 1.84
-    if(len == 3):
+    elif len == 3:
       t = 1.32
-    if(len == 4):
+    elif len == 4:
       t = 1.20
-    if(len == 5):
+    elif len == 5:
       t = 1.14
-    if(len >= 6):
+    elif len >= 6:
       t = 1
 
     return t
