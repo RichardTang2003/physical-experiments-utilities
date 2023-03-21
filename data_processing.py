@@ -57,6 +57,7 @@ def save_results(good_values, outliers, mean, std_dev, instrument_error, confide
         f.write('剩余的值: ' + ' '.join(map(str, good_values)) + '\n')
         f.write('剔除的值: ' + ' '.join(map(str, outliers)) + '\n')
         f.write('最终的平均数: ' + str(mean) + '\n')
+        f.write('S = ' + str(np.std(good_values, ddof=1)) + '\n')
         f.write('σ = '+ str(std_dev) + ', 3σ = '+ str(3*std_dev) + '\n')
         f.write('每个最终值的标准差: ' + ' '.join(map(str, individual_std_devs)) + '\n')
         a_class_uncertainty = std_dev / np.sqrt(np.size(good_values))
@@ -65,10 +66,10 @@ def save_results(good_values, outliers, mean, std_dev, instrument_error, confide
         f.write('A类不确定度（标准偏差）: ' + str(a_class_uncertainty) + '\n')
         f.write('B类不确定度: ' + str(b_class_uncertainty) + '\n')
         f.write('不确定度: ' + str(combined_uncertainty) + '\n')
-        f.write('相对不确定度: ' + str(combined_uncertainty / (100*mean)) + '%\n')
+        f.write('相对不确定度: ' + str(100 * combined_uncertainty / mean) + '%\n')
         f.write('\n')
         f.write('测量结果为: \n       x = ' + str(mean) + '±' + str(combined_uncertainty) + '\n')
-        f.write('     Δx/x = ' + str(combined_uncertainty / (100 * mean)) + '%\n')
+        f.write('     Δx/x = ' + str(100 * combined_uncertainty / mean) + '%\n')
         
 
 if __name__ == '__main__':
@@ -76,5 +77,5 @@ if __name__ == '__main__':
     data, instrument_error, confidence_coefficient = read_data(file_path)
     good_values, outliers = remove_outliers(data)
     mean = np.mean(good_values)
-    std_dev = np.std(good_values, ddof=1)  * t683(data)
+    std_dev = np.std(good_values, ddof=1)  * t683(good_values)
     save_results(good_values, outliers, mean, std_dev, instrument_error, confidence_coefficient)
