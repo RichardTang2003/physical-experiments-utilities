@@ -34,7 +34,7 @@ def remove_outliers(data):
     
     while True:
         mean = np.mean(data)
-        std_dev = np.std(data) * t683(data)
+        std_dev = np.std(data, ddof=1) * t683(data)
         lower_bound = mean - 3 * std_dev
         upper_bound = mean + 3 * std_dev
 
