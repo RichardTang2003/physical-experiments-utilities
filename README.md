@@ -7,31 +7,15 @@ Website: [illlights.com](https://www.illlights.com)
 
 
 
-## 3sigma.py
+## data_processing.py
 
-简介：3σ去除坏值。
-
-使用方法：
-
-1. 在同一目录下建立一个input.txt，把实验数据全部放输进去，一个数据一个空格。
-
-2. 运行3sigma.py
-
-   （如果在文件在C盘需要以管理员身份运行）
-
-3. 结果会输出在result.txt
-
-
-
-## uncertainty.py
-
-简介：计算不确定度
+简介：基本的数据处理，先运用3σ去除坏值并计算数据的不确定度。
 
 使用方法：
 
 1. 在同一目录下建立一个input.txt，第一行输入实验数据一个数据一个空格，第二行输入仪器误差和置信系数，如果不写置信系数默认为根号3.
 
-2. 运行uncertainty.py
+2. 运行data_processing.py
 
    （如果在文件在C盘需要以管理员身份运行）
 
@@ -77,7 +61,7 @@ Website: [illlights.com](https://www.illlights.com)
 
 
 
-## lagrange_multiplier_optimization.py
+## lagrange_multiplier_optimization.py（不建议使用）
 
 简介：二元拉格朗日乘子法解决条件约束问题
 
