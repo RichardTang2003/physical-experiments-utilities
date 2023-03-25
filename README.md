@@ -11,7 +11,7 @@ Website: [illlights.com](https://www.illlights.com)
 
 简介：基本的数据处理，先运用3σ去除坏值并计算数据的不确定度。
 
-**使用方法：在右侧的 releases 中下载可执行文件，按照压缩包内的说明使用。**
+**使用方法：在右侧的 releases 中下载可执行文件，按照程序内的说明使用。**
 
 Python 源文件使用方法：
 
